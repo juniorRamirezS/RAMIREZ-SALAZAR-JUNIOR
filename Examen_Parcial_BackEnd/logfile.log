@@ -122,3 +122,28 @@ APELLIDO VARCHAR(50) NOT NULL
 [2024-08-12 21:23:38] [ INFO ] [DaoH2Domicilio:131] Paciente{id=1, apellido='PEREZ', nombre='JUAN', dni='4654666', fechaIngreso=2024-07-15, domicilio=Domicilio{id=1, calle='SIEMPRE VIVA', numero=123, localidad='SAN SALVADOR', provincia='JUJUY'}}
 [2024-08-12 21:23:38] [ INFO ] [DaoH2Domicilio:82] domicilio encontrado Domicilio{id=2, calle='Falsa', numero=145, localidad='CABA', provincia='Buenos Aires'}
 [2024-08-12 21:23:38] [ INFO ] [DaoH2Domicilio:131] Paciente{id=2, apellido='Castro', nombre='Maria', dni='48974646', fechaIngreso=2024-07-15, domicilio=Domicilio{id=2, calle='Falsa', numero=145, localidad='CABA', provincia='Buenos Aires'}}
+[2024-08-12 21:43:26] [ INFO ] [DaoEnMemoria:17] Odontologo guardado en memoria Odontologo{id=1, numeroDeMatricula='1452368795', nombre='Maria', apellido='Flores'}
+[2024-08-12 21:43:26] [ INFO ] [DaoEnMemoria:17] Odontologo guardado en memoria Odontologo{id=1, numeroDeMatricula='2548974677', nombre='Noel', apellido='Suares'}
+[2024-08-12 21:43:26] [ INFO ] [DaoEnMemoria:30] Odontologo encontrado Odontologo{id=1, numeroDeMatricula='2548974677', nombre='Noel', apellido='Suares'}
+[2024-08-12 21:44:45] [ INFO ] [DaoH2Domicilio:36] domicilio persistido Domicilio{id=2, calle='Falsa', numero=145, localidad='CABA', provincia='Buenos Aires'}
+[2024-08-12 21:44:45] [ INFO ] [DaoH2Domicilio:45] paciente Paciente{id=2, apellido='Castro', nombre='Maria', dni='48974646', fechaIngreso=2024-07-15, domicilio=Domicilio{id=2, calle='Falsa', numero=145, localidad='CABA', provincia='Buenos Aires'}}
+[2024-08-12 21:44:46] [ INFO ] [DaoH2Domicilio:82] domicilio encontrado Domicilio{id=1, calle='SIEMPRE VIVA', numero=123, localidad='SAN SALVADOR', provincia='JUJUY'}
+[2024-08-12 21:44:46] [ INFO ] [DaoH2Domicilio:94] paciente encontrado Paciente{id=1, apellido='PEREZ', nombre='JUAN', dni='4654666', fechaIngreso=2024-07-15, domicilio=Domicilio{id=1, calle='SIEMPRE VIVA', numero=123, localidad='SAN SALVADOR', provincia='JUJUY'}}
+[2024-08-12 21:44:46] [ INFO ] [DaoH2Domicilio:82] domicilio encontrado Domicilio{id=1, calle='SIEMPRE VIVA', numero=123, localidad='SAN SALVADOR', provincia='JUJUY'}
+[2024-08-12 21:44:46] [ INFO ] [DaoH2Domicilio:131] Paciente{id=1, apellido='PEREZ', nombre='JUAN', dni='4654666', fechaIngreso=2024-07-15, domicilio=Domicilio{id=1, calle='SIEMPRE VIVA', numero=123, localidad='SAN SALVADOR', provincia='JUJUY'}}
+[2024-08-12 21:44:46] [ INFO ] [DaoH2Domicilio:82] domicilio encontrado Domicilio{id=2, calle='Falsa', numero=145, localidad='CABA', provincia='Buenos Aires'}
+[2024-08-12 21:44:46] [ INFO ] [DaoH2Domicilio:131] Paciente{id=2, apellido='Castro', nombre='Maria', dni='48974646', fechaIngreso=2024-07-15, domicilio=Domicilio{id=2, calle='Falsa', numero=145, localidad='CABA', provincia='Buenos Aires'}}
+[2024-08-12 21:47:02] [ INFO ] [DaoH2Odontologo:38] Odontologo Odontologo{id=2, numeroDeMatricula='1234568975', nombre='Juan', apellido='Perez'}
+[2024-08-12 21:47:02] [ INFO ] [DaoH2Odontologo:86] Odontologo encontrado Odontologo{id=1, numeroDeMatricula='1025698476', nombre='FELIPE', apellido='ROJAS'}
+[2024-08-12 21:47:03] [ INFO ] [DaoH2Odontologo:122] Odontologo{id=1, numeroDeMatricula='1025698476', nombre='FELIPE', apellido='ROJAS'}
+[2024-08-12 21:47:03] [ INFO ] [DaoH2Odontologo:122] Odontologo{id=2, numeroDeMatricula='1234568975', nombre='Juan', apellido='Perez'}
+[2024-08-12 21:47:42] [ INFO ] [DaoEnMemoria:17] Odontologo guardado en memoria Odontologo{id=1, numeroDeMatricula='1452368795', nombre='Maria', apellido='Flores'}
+[2024-08-12 21:47:42] [ INFO ] [DaoEnMemoria:17] Odontologo guardado en memoria Odontologo{id=1, numeroDeMatricula='2548974677', nombre='Noel', apellido='Suares'}
+[2024-08-12 21:47:42] [ INFO ] [DaoEnMemoria:30] Odontologo encontrado Odontologo{id=1, numeroDeMatricula='2548974677', nombre='Noel', apellido='Suares'}
+[2024-08-12 21:49:25] [ INFO ] [DaoH2Odontologo:38] Odontologo Odontologo{id=2, numeroDeMatricula='1234568975', nombre='Juan', apellido='Perez'}
+[2024-08-12 21:49:26] [ INFO ] [DaoH2Odontologo:86] Odontologo encontrado Odontologo{id=1, numeroDeMatricula='1025698476', nombre='FELIPE', apellido='ROJAS'}
+[2024-08-12 21:49:26] [ INFO ] [DaoH2Odontologo:122] Odontologo{id=1, numeroDeMatricula='1025698476', nombre='FELIPE', apellido='ROJAS'}
+[2024-08-12 21:49:26] [ INFO ] [DaoH2Odontologo:122] Odontologo{id=2, numeroDeMatricula='1234568975', nombre='Juan', apellido='Perez'}
+[2024-08-12 21:49:39] [ INFO ] [DaoEnMemoria:17] Odontologo guardado en memoria Odontologo{id=1, numeroDeMatricula='1452368795', nombre='Maria', apellido='Flores'}
+[2024-08-12 21:49:39] [ INFO ] [DaoEnMemoria:17] Odontologo guardado en memoria Odontologo{id=1, numeroDeMatricula='2548974677', nombre='Noel', apellido='Suares'}
+[2024-08-12 21:49:39] [ INFO ] [DaoEnMemoria:30] Odontologo encontrado Odontologo{id=1, numeroDeMatricula='2548974677', nombre='Noel', apellido='Suares'}

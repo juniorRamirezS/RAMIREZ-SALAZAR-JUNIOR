@@ -1,40 +1,39 @@
 package dao.impl;
 
 import dao.IDao;
-import model.Paciente;
+import model.Odontologo;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DaoEnMemoria implements IDao<Paciente> {
+public class DaoEnMemoria implements IDao<Odontologo> {
     public static final Logger logger = Logger.getLogger(DaoEnMemoria.class);
-    private List<Paciente> pacientes = new ArrayList<>();
+    private List<Odontologo> odontologos = new ArrayList<>();
     @Override
-    public Paciente guardar(Paciente paciente) {
-        paciente.setId(pacientes.size()+1);
-        paciente.getDomicilio().setId(pacientes.size()+1);
-        pacientes.add(paciente);
-        logger.info("paciente guardado en memoria " +paciente);
-        return paciente;
+    public Odontologo guardar(Odontologo odontologo) {
+        odontologo.setId(odontologos.size()+1);
+        odontologos.add(odontologo);
+        logger.info("Odontologo guardado en memoria " +odontologo);
+        return odontologo;
     }
 
     @Override
-    public Paciente buscarPorId(Integer id) {
-        Paciente pacienteARetornar = null;
-        for(Paciente paciente : pacientes){
-            if(paciente.getId()== id){
-                pacienteARetornar = paciente;
+    public Odontologo buscarPorId(Integer id) {
+        Odontologo odontologoARetornar = null;
+        for(Odontologo odontologo : odontologos){
+            if(odontologo.getId()== id){
+                odontologoARetornar = odontologo;
             }
         }
-        if(pacienteARetornar!=null){
-            logger.info("paciente encontrado "+ pacienteARetornar);
-        }else logger.info("paciente no encontrado");
-        return pacienteARetornar;
+        if(odontologoARetornar!=null){
+            logger.info("Odontologo encontrado "+ odontologoARetornar);
+        }else logger.info("Odontologo no encontrado");
+        return odontologoARetornar;
     }
 
     @Override
-    public List<Paciente> listaTodos() {
+    public List<Odontologo> listaTodos() {
         return null;
     }
 }
