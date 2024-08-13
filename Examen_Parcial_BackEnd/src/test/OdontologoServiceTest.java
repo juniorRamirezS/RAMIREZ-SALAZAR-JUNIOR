@@ -1,25 +1,23 @@
 package test;
 
-import dao.impl.DaoH2Paciente;
-import model.Domicilio;
-import model.Paciente;
+import dao.impl.DaoH2Odontologo;
+import model.Odontologo;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import service.PacienteService;
+import service.OdontologoService;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PacienteServiceTest {
-    static final Logger logger = Logger.getLogger(PacienteServiceTest.class);
-    PacienteService pacienteService = new PacienteService(new DaoH2Paciente());
+class OdontologoServiceTest {
+    static final Logger logger = Logger.getLogger(OdontologoServiceTest.class);
+    OdontologoService odontologoService = new OdontologoService(new DaoH2Odontologo());
     @BeforeAll
     static void crearTablas(){
         Connection connection = null;
@@ -38,37 +36,35 @@ class PacienteServiceTest {
         }
     }
     @Test
-    @DisplayName("Testear que un paciente fue cargado correctamente con su domicilio")
+    @DisplayName("Testear que un Odontologo fue cargado correctamente")
     void caso1(){
         //Dado
-        Paciente paciente = new Paciente("Castro","Maria", "48974646", LocalDate.of(2024,7,15),
-                new Domicilio("Falsa",145,"CABA","Buenos Aires"));
+        Odontologo odontologo = new Odontologo("1234568975", "Juan", "Perez");
         //cuando
-        Paciente pacienteDesdeDb = pacienteService.guardarPaciente(paciente);
+        Odontologo odontologoDesdeDb = odontologoService.guardarOdontologo(odontologo);
         // entonces
-        assertNotNull(pacienteDesdeDb.getId());
+        assertNotNull(odontologoDesdeDb.getId());
     }
 
     @Test
-    @DisplayName("Testear que un paciente pueda acceder por id")
+    @DisplayName("Testear que un odontologo pueda acceder por id")
     void caso2(){
         //Dado
         Integer id = 1;
         //cuando
-        Paciente pacienteDesdeDb = pacienteService.buscarPorId(id);
+        Odontologo odontologoDesdeDb = odontologoService.buscarPorId(id);
         // entonces
-        assertEquals(id, pacienteDesdeDb.getId());
+        assertEquals(id, odontologoDesdeDb.getId());
     }
 
     @Test
-    @DisplayName("Listar todos los pacientes")
+    @DisplayName("Listar todos los odontologos")
     void caso3(){
         //Dado
-        List<Paciente> pacientes;
+        List<Odontologo> odontologos;
         // cuando
-        pacientes = pacienteService.buscarTodos();
+        odontologos = odontologoService.buscarTodos();
         // entonces
-        assertFalse(pacientes.isEmpty());
+        assertFalse(odontologos.isEmpty());
     }
-
 }

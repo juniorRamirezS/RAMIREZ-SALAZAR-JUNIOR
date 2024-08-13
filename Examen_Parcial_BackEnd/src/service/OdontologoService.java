@@ -12,7 +12,7 @@ public class OdontologoService {
         this.odontologoIDao = odontologoIDao;
     }
 
-    public Odontologo guardarPaciente(Odontologo odontologo){
+    public Odontologo guardarOdontologo(Odontologo odontologo){
         return odontologoIDao.guardar(odontologo);
     }
 
